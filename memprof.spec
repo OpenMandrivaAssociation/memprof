@@ -1,6 +1,6 @@
 %define name	memprof
 %define version	0.6
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Tool for memory profiling and leak detection
 Name:		%{name}
@@ -31,7 +31,7 @@ recompilation.
 %patch1 -p1 -b .force-static-libbfd
 
 %build
-%configure2_5x --libdir=%{_libdir}/memprof
+%configure2_5x
 %make
 
 %install
