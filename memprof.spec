@@ -18,7 +18,6 @@ ExclusiveArch:	%{ix86}
 Requires:	GConf2
 BuildRequires:	libbinutils-devel, libglade2.0-devel, libgnomeui2-devel
 #BuildRequires:	desktop-file-utils
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 MemProf is a tool for profiling memory usage and detecting memory
