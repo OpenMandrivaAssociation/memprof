@@ -45,17 +45,6 @@ mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1
 bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
 # mdk menu
-mkdir -p $RPM_BUILD_ROOT/%_menudir
-cat > $RPM_BUILD_ROOT/%_menudir/%{name} <<EOF
-?package(%{name}):\
-    command="%{_bindir}/memprof"\
-    title="Memprof"\
-    icon="%{name}.png"\
-    longtitle="Tool for memory profiling and leak detection"\
-    needs="x11"\
-    section="More Applications/Development/Tools" \
-    xdg="true"
-EOF
 
 #gw at the moment we patch the desktop entry directly
 #desktop-file-install --vendor="" \
@@ -110,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %{_datadir}/memprof/*
 #
-%{_menudir}/%{name}
 #
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
