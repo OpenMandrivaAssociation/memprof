@@ -66,18 +66,26 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/memprof/*.{a,la}
 %define schemas %{name}
 
 %post
+%if %mdkversion < 200900
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %{update_scrollkeeper}
+%endif
 
+%if %mdkversion < 200900
 %post_install_gconf_schemas %{schemas}
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas %{schemas}
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
 %{clean_scrollkeeper}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
