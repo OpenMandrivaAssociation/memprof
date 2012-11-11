@@ -1,0 +1,22 @@
+--- memprof-0.5.1/configure.in.force-static-libbfd	2002-08-31 22:09:36.000000000 +0200
++++ memprof-0.5.1/configure.in	2003-02-08 13:53:15.000000000 +0100
+@@ -52,7 +52,7 @@ AC_CHECK_LIB(iberty, cplus_demangle,:, 
+   AC_CHECK_LIB(iberty, cplus_demangle_opname, LIBS="$LIBS -ldl",
+     AC_MSG_ERROR([*** libiberty required to compile MemProf]), -ldl))
+ 
+-AC_CHECK_LIB(bfd, bfd_get_error, [MEMPROF_LIBS="$MEMPROF_LIBS -Wl,-Bstatic -lbfd -liberty -Wl,-Bdynamic"], 
++AC_CHECK_LIB(bfd, bfd_get_error, [MEMPROF_LIBS="$MEMPROF_LIBS /usr/lib/libbfd.a /usr/lib/libiberty.a"], 
+   AC_MSG_ERROR([*** libbfd required to compile MemProf]),
+   -liberty)
+ 
+--- memprof-0.5.1/configure.force-static-libbfd	2002-08-31 22:09:49.000000000 +0200
++++ memprof-0.5.1/configure	2003-02-08 13:54:39.000000000 +0100
+@@ -8418,7 +8418,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_bfd_bfd_get_error" >&5
+ echo "${ECHO_T}$ac_cv_lib_bfd_bfd_get_error" >&6
+ if test $ac_cv_lib_bfd_bfd_get_error = yes; then
+-  MEMPROF_LIBS="$MEMPROF_LIBS -Wl,-Bstatic -lbfd -liberty -Wl,-Bdynamic"
++  MEMPROF_LIBS="$MEMPROF_LIBS /usr/lib/libbfd.a /usr/lib/libiberty.a"
+ else
+   { { echo "$as_me:$LINENO: error: *** libbfd required to compile MemProf" >&5
+ echo "$as_me: error: *** libbfd required to compile MemProf" >&2;}
