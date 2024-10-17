@@ -13,7 +13,7 @@ Source1:	memprof-icons.tar.bz2
 Source2:	memprof-manpage.bz2
 Patch:          memprof-0.6-desktopentry.patch
 Patch1:		memprof-0.5.1-force-static-libbfd.patch
-URL:		http://www.gnome.org/projects/memprof/
+URL:		https://www.gnome.org/projects/memprof/
 ExclusiveArch:	%{ix86}
 Requires:	GConf2
 BuildRequires:	libbinutils-devel, libglade2.0-devel, libgnomeui2-devel
