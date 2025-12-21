@@ -16,6 +16,11 @@ Patch1:		memprof-0.5.1-force-static-libbfd.patch
 URL:		https://www.gnome.org/projects/memprof/
 ExclusiveArch:	%{ix86}
 Requires:	GConf2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libbinutils-devel, libglade2.0-devel, libgnomeui2-devel
 #BuildRequires:	desktop-file-utils
 BuildRoot:	%{_tmppath}/%{name}-buildroot
