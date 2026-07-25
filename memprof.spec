@@ -1,6 +1,6 @@
 %define name	memprof
 %define version	0.6
-%define release %mkrel 7
+%define release 8
 
 Summary:	Tool for memory profiling and leak detection
 Name:		%{name}
